@@ -1,0 +1,24 @@
+{
+  "name": "zksign-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "pnpm install && (cd cargo-workspace && cargo fetch)",
+    "build:rust": "cd cargo-workspace && cargo build --workspace --release",
+    "build:wasm": "cd cargo-workspace && cd crates/zksign-wasm && wasm-pack build --release --target bundler && mkdir -p ../../../../packages/zk-prover/wasm && cp -r pkg ../../../../packages/zk-prover/wasm",
+    "build:ts": "turbo run build",
+    "build": "pnpm -w build:rust && pnpm -w build:wasm && pnpm -w build:ts",
+    "test": "turbo run test && (cd cargo-workspace && cargo test --workspace)",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+  },
+  "devDependencies": {
+    "turbo": "^1.10.6",
+    "prettier": "^2.8.0",
+    "eslint": "^8.40.0",
+    "pnpm": "^8.0.0"
+  }
+}

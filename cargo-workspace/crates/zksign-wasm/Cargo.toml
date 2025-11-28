@@ -1,0 +1,18 @@
+[package]
+name = "zksign-wasm"
+version = "0.1.0"
+edition = "2021"
+description = "WASM bindings exposing prover & verifier to JS via wasm-bindgen"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+zksign-circuits = { path = "../zksign-circuits" }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+

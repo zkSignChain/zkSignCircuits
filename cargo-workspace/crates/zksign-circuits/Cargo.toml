@@ -1,0 +1,16 @@
+[package]
+name = "zksign-circuits"
+version = "0.1.0"
+edition = "2021"
+description = "Circuits for zkSign (sample Halo2/arkworks circuits)"
+
+[lib]
+name = "zksign_circuits"
+crate-type = ["rlib"]
+
+[dependencies]
+# Keep circuit dependencies optional to avoid heavy installs during initial scaffolding
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+rand = "0.8"

@@ -1,0 +1,6 @@
+[programs.localnet]
+zksign_anchor = "target/deploy/zksign_anchor.so"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"

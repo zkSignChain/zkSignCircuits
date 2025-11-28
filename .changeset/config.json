@@ -1,0 +1,7 @@
+{
+  "changelog": ["@changesets/cli", {"repo": "zksign-monorepo"}],
+  "commit": false,
+  "linked": [],
+  "access": "restricted",
+  "baseBranch": "main"
+}

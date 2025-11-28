@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "crates/zksign-crypto",
+    "crates/zksign-circuits",
+    "crates/zksign-wasm",
+    "crates/zksign-anchor"
+]
+
+[workspace.metadata]
+package-type = "hybrid-monorepo"

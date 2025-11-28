@@ -1,0 +1,16 @@
+{
+  "name": "zksign-example-node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsup src/index.ts --format cjs --out-dir dist --dts false"
+  },
+  "dependencies": {
+    "@zksign/zk-prover": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^6.6.0",
+    "typescript": "^5.3.0"
+  }
+}

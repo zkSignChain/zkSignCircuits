@@ -1,0 +1,10 @@
+{
+  "name": "zksign-dev",
+  "image": "mcr.microsoft.com/vscode/devcontainers/rust:1-ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "postCreateCommand": "pnpm install || true"
+}

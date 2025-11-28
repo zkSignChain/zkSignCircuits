@@ -1,0 +1,17 @@
+[package]
+name = "zksign-crypto"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance crypto utilities for zkSign (Poseidon, Merkle helpers, hashes)"
+
+[lib]
+name = "zksign_crypto"
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+sha2 = "0.10"
+blake2 = "0.10"

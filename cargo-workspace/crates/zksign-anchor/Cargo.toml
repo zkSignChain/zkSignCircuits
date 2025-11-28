@@ -1,0 +1,11 @@
+[package]
+name = "zksign-anchor"
+version = "0.1.0"
+edition = "2021"
+description = "Anchor program for on-chain verification and attestation storage"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anchor-lang = "0.28"
